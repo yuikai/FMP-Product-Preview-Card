@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./styles.css"/>
+</head>
+<body>
+  <div id="app">
+    <picture>
+      <source srcset="./images/image-product-mobile.jpg"
+        media="(max-width: 1000px)"/>
+      <img src="./images/image-product-desktop.jpg" alt="Product Image">
+    </picture>
+
+    <div id="container">
+      <h1>{{ displayType }}</h1>
+      <h2>{{ productName }}</h2>
+      <p>{{ productDesc }}</p>
+      <div id="price">
+        <h3>${{ discountPrice }}</h3>
+        <p>${{ originalPrice }}</p>
+      </div>
+      <button>
+        <img src="./images/icon-cart.svg" alt="Cart Icon"/>
+        Add to Cart
+      </button>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">uKai</a>.
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
